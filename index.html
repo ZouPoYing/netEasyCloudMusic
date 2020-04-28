@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			html {
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+			
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+			/*head*/
+			
+			#head {
+				width: 1519px;
+				height: 105px;
+			}
+			
+			#head #head-black {
+				position: relative;
+				width: 1519px;
+				height: 70px;
+				background: #242424;
+			}
+			
+			#head #head-red {
+				width: 1519px;
+				height: 35px;
+				background: #c20c0c;
+			}
+			
+			#link-home {
+				display: block;
+				width: 177px;
+				height: 70px;
+				background: url(img/icon-wyy.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin-left: 200px;
+			}
+			
+			.head-ul-li {
+				width: 94px;
+				height: 70px;
+				display: block;
+				list-style: none;
+				float: left;
+				text-align: center;
+			}
+			
+			.head-ul-li a {
+				display: block;
+				margin: 25px 10px 10px 10px;
+				color: white;
+				font-size: 14px;
+				text-decoration: none;
+			}
+			
+			.head-ul-li:hover {
+				background: black;
+			}
+			
+			#a-hot {
+				position: absolute;
+				top: 10px;
+				right: 565px;
+				width: 25px;
+				/*background: url(img/HOT.png) no-repeat top -20px right;
+				background-size: 28px;*/
+			}
+			
+			.input-group {
+				position: relative;
+				width: 158px;
+				left: 20px;
+			}
+			
+			.input-group-addon {
+				/*position: absolute;*/
+				height: 34px;
+				width: 30px;
+				background: url(img/sousuo.png) no-repeat top 3px center;
+				background-size: 20px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				background-color: white;
+				outline: none;
+				display: inline-block;
+				margin-top: 10px;
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.form-control {
+				position: absolute;
+				/*position: absolute;*/
+				right: -40px;
+				top: -44px;
+				float: left;
+				height: 34px;
+				width: 220px;
+				border: none;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				outline: none;
+				display: inline-block;
+				margin-top: 10px;
+			}
+			
+			#authors {
+				position: absolute;
+				top: 12px;
+				right: 250px;
+				width: 90px;
+				height: 36px;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				/*float: left;*/
+				background: none;
+				border: 1px solid gainsboro;
+				color: white;
+				font-size: 12px;
+				display: inline-block;
+				outline: none;
+			}
+			
+			#authors:hover {
+				border: 2px solid white;
+			}
+			
+			.clearfix {
+				position: absolute;
+				right: 180px;
+				top: 12px;
+			}
+			
+			#dropdownMenuDivider {
+				background: black;
+				border: 1px solid white;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				color: white;
+				outline: none;
+			}
+			
+			#dropdownMenuDivider:hover {
+				border: 2px solid white;
+			}
+			
+			#head-red ul {
+				position: absolute;
+				width: 1519px;
+				height: 35px;
+				left: 330px;
+				margin-bottom: 0px;
+			}
+			
+			#head-red ul .head-ul-li2 {
+				width: 110px;
+				height: 35px;
+				display: block;
+				list-style: none;
+				float: left;
+				text-align: center;				
+			}
+			
+			#head-red ul .head-ul-li2 a {
+				display: block;
+				height: 18px;
+				margin: 10px 20px 10px 20px;
+				color: white;
+				font-size: 12px;
+				text-decoration: none;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+			}
+			
+			#head-red ul .head-ul-li2 a:hover {
+				background: #9b0909;
+			}
+			/*footer*/
+									
+			#footer .row {
+				width: 1535px;
+				height: 150px;
+				background: #f2f2f2;
+				display: inline-block;
+			}
+			
+			#footer .row .col-md-8 {
+				height: 150px;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 ul li {
+				display: inline-block;
+				margin-right: 10px;
+				margin-top: 20px;
+				text-align: center;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 ul li a {
+				list-style: none;
+				color: gray;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 p a {
+				color: black;
+			}
+			
+			#footer-a1 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a1.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a2 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a2.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a3 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a3.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a4 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a4.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			/*返回顶部*/
+			.top{
+				width: 50px;
+				height: 50px;
+				background: url(img/top.PNG) no-repeat  top center;
+				position: fixed;								
+				text-align: center;
+				border: 1px solid gainsboro;
+				border-radius: 2px;
+				bottom: 200px;
+				right: 200px;
+			}
+			/*body*/
+			/*轮播*/
+			.banner{
+				height: 340px;
+			}
+			.banner .carousel .item {
+				text-align: center;
+			}
+			.banner .carousel ol {
+				margin-bottom: 0px;
+			}
+			.banner .carousel ol li {
+				margin: 0px 10px;
+			}
+			
+			.banner .carousel .item>img {
+				display: inline-block;
+			}
+			.banner .carousel>a {				
+				background: none;
+			}
+            .downLoadPic{
+            	text-align: center;
+            	position: absolute;
+            	right: 277px;
+            	width: 250px;
+            	height: 340px;
+            	background: url(img/downLoadPic.PNG) no-repeat  top center;
+            	background-size: 100%;
+            	z-index: 1;
+            }
+            .downLoadPic>a{
+            	display: inline-block;
+            	width: 200px;
+            	height: 50px;
+            	margin-top: 220px;
+            	background: url(img/downLoad.PNG) no-repeat  top center;
+            	background-size: 100%;  
+            }
+            #body .col-md-8{
+            	height: 1500px;
+            	background: white;
+            	border-top: 1px solid gainsboro;
+            	border-bottom: 1px solid gainsboro;
+            }
+            #body .col-md-2{
+            	border: 1px solid gainsboro;
+            	height: 1500px;
+            	background: #f2f2f2;
+            }
+            #body .col-md-8 .col-md-9{
+            	height: 1500px;
+            	border-right: 1px solid gainsboro;         	
+            }
+            /*#body .col-md-8 .col-md-3{
+            	height: 500px;       	
+            }*/
+            #body .col-md-8 .col-md-9 .circle{
+            	width: 15px;
+            	height: 15px;
+            	background: none ;
+            	border-radius: 50%;
+            	border: 5px solid #c10d0c;
+            	float: left;
+            	margin: 12px 20px 0px 5px;            	
+            }
+            #body .col-md-8 .col-md-9 h4{
+            	float: left;
+            }
+            #body .col-md-8 .col-md-9 ul{
+            	width: 500px;
+            	height: 20px;
+            	margin: 12px 0px 0px 20px;
+            	display: inline-block;
+            }
+            #body .col-md-8 .col-md-9 ul li{           	
+            	width: 60px;
+            	height: 20px;
+            	display: inline-block;				
+            	float: left;
+            	text-align: center;
+            	border-right:1px solid gainsboro ;           	
+            }
+            #body .col-md-8 .col-md-9 ul li a{
+            	color: gray;          	
+            }
+            #body .col-md-8 .col-md-9 .tj{
+            	height: 480px;      	
+            }
+            #body .col-md-8 .col-md-9 .tj a{
+            	color: black;      	
+            }
+            #body .col-md-8 .col-md-9 .tj .row1{
+            	height: 220px;      	
+            }
+            #body .col-md-8 .col-md-9 .tj .row2{
+            	height: 220px;      	
+            }
+            #body .col-md-8 .col-md-9 .xd{             	
+            	height: 200px;   
+            	background:  #f2f2f2; 
+            	border: 1px solid gainsboro;
+            	overflow: hidden;  	
+            }
+            #body .col-md-8 .col-md-9 .xd .previous{ 
+            	position: absolute;
+            	width: 30px;            	
+            	height: 200px;   
+            	background: url(img/previous.PNG) no-repeat  top center;
+            	background-size: 100%;
+            	display: block; 
+            	left: 15px;
+            	float: left;  
+            	z-index: 1;        	           	 	
+            }
+            #body .col-md-8 .col-md-9 .xd .next{ 
+            	position: absolute;
+            	width: 30px;            	
+            	height: 200px;   
+            	background: url(img/next.PNG) no-repeat  top center;
+            	background-size: 100%;
+            	display: block;
+            	right: 15px;  
+            	float: right;
+            	z-index: 1;             	 	
+            }
+            #body .col-md-8 .col-md-9 .xd .xd-change{ 
+            	width: 1288.18px;            	
+            	height: 200px;   
+            	background:  #f2f2f2; 
+            	float: left;
+            	left: 30px;    
+            	overflow: hidden;
+            	position: relative;           	 	
+            }
+            #body .col-md-8 .col-md-9 .xd .xd-change .xd-change1,.xd-change2{ 
+            	width: 644.09px;            	
+            	height: 200px;   
+            	background:  #f2f2f2; 
+            	float: left; 
+            	              	 	
+            }
+            .xd-change2{
+            	
+            	left: 644.09px;
+            }
+            #body .col-md-8 .col-md-9 .xd .xd-change .xd-pic{ 
+            	width: 100px;            	
+            	height: 150px;   
+            	margin: 30px 14px 20px 14px;
+            	float: left;               	 	
+            }
+            #body .col-md-8 .col-md-9 .xd .xd-change .xd-pic a{ 
+            	width: 100px;            	
+            	height: 20px;
+            	overflow: hidden;
+            	display: block;     
+            	color: black;
+            	white-space: nowrap;
+            	text-overflow :ellipsis;            	 	
+            }
+            #body .col-md-8 .col-md-9 .bd{
+            	margin-top: 20px;
+            	height: 566px;   
+            	background:  #f2f2f2; 
+            	border: 1px solid gainsboro;            	 	
+            } 
+            #body .col-md-8 .col-md-9 .bd a{            	
+            	color: black;           	            	           	 	
+            }  
+            #body .col-md-8 .col-md-9 .bd .bs-example table thead tr .bd-pic1{            	
+            	height: 160px;  
+            	background: url(img/bd-pic1.png) no-repeat  top 20px left 20px;      	            	           	 	
+            }  
+            #body .col-md-8 .col-md-9 .bd .bs-example table thead tr .bd-pic2{            	
+            	height: 100px;  
+            	background: url(img/bd-pic2.png) no-repeat  top 20px left 20px;      	            	           	 	
+            }  
+            #body .col-md-8 .col-md-9 .bd .bs-example table thead tr .bd-pic3{            	
+            	height: 100px;  
+            	background: url(img/bd-pic3.png) no-repeat  top 20px left 20px;      	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .dl{ 
+            	width: 230px;           	
+            	height: 130px;  
+            	background: #f2f2f2;  
+            	border: 1px solid gainsboro;    	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .dl p{ 
+            	width: 230px;           	
+            	height: 30px;
+            	display: block;  
+            	background: #f2f2f2; 
+            	color: gray;
+            	font-size: 12px;
+            	margin: 20px 0px; 
+            	padding: 0 20px;            	   	            	           	 	
+            } 
+            #body .col-md-8 .col-md-3 .dl a{ 
+            	width: 100px;           	
+            	height: 30px;
+            	display: block;  
+            	background: url(img/yhdl.PNG) no-repeat  top center;
+            	background-size: 100%;
+            	margin-left:60px;
+            	color: white;            	
+            	border: 1px solid gray;
+            	border-radius: 2px;           	   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .gs{
+            	margin-top:20px ; 
+            	height: 550px;            	         	           		   	            	           	 	
+            }  
+            #body .col-md-8 .col-md-3 .gs a{ 
+            	color: gray;            	           		   	            	           	 	
+            } 
+            #body .col-md-8 .col-md-3 .gs ul li{ 
+            	display: block;
+            	margin: 20px 0px 20px 0px;
+            	width: 230px;
+            	height: 75px; 
+            	list-style: none;           	           	          	           		   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .gs ul li a{ 
+            	display: block;            	
+            	width: 230px;
+            	height: 75px;            	            	 
+            	background-size: 100%;
+            	border: 1px solid gainsboro;         	           		   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .gs .yyr{ 
+            	display: block;            	
+            	width: 230px;
+            	height: 25px;            	            	 
+            	background:  #f2f2f2; 
+            	border: 1px solid gainsboro; 
+            	color: black;
+            	text-align: center;
+            	text-decoration: none;      	           		   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .zb{
+            	margin-top:20px ; 
+            	height: 550px;            	         	           		   	            	           	 	
+            }  
+            #body .col-md-8 .col-md-3 .zb a{ 
+            	color: gray;            	           		   	            	           	 	
+            } 
+            #body .col-md-8 .col-md-3 .zb ul li{ 
+            	display: block;
+            	margin: 20px 0px 20px 0px;
+            	width: 230px;
+            	height: 60px; 
+            	list-style: none;           	           	          	           		   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .zb ul li a{ 
+            	display: block;            	
+            	width: 230px;
+            	height: 60px;            	            	 
+            	background-size: 100%;            	        	           		   	            	           	 	
+            }
+            #body .col-md-8 .col-md-3 .zb .yyr{ 
+            	display: block;            	
+            	width: 230px;
+            	height: 25px;            	            	 
+            	background:  #f2f2f2; 
+            	border: 1px solid gainsboro; 
+            	color: black;
+            	text-align: center;
+            	text-decoration: none;      	           		   	            	           	 	
+            }                      
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head-black">
+				<a href="index.html" id="link-home"></a>
+				<ul>
+					<li class="head-ul-li" style="background: black;">
+						<a href="index.html">发现音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="myMusicUnlogged.html">我的音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="friendUnloged.html">朋友</a>
+					</li>
+					<li class="head-ul-li">
+						<a target="_blank" href="musicStore.html" >商城</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="music man.html" target="_blank">音乐人</a>
+					</li>
+					<li class="head-ul-li">
+						<img id="a-hot" src="img/HOT.png" />
+						<a href="downLoad.html" target="_blank">下载客户端</a>
+					</li>
+				</ul>
+				<div class="input-sreach">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1"></span>
+						<input type="text" class="form-control" placeholder="音乐/视频/电台/用户" aria-describedby="basic-addon1">
+					</div>
+					<button id="authors">创作者中心</button>
+					<div class="dropdown clearfix">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					        登陆
+					        <span class="caret"></span>
+					    </button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+							<li>
+								<a href="nothing.html">手机号登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">微信登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">QQ登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">新浪微博登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">网易邮箱账号登陆</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="head-red">
+				<ul>
+					<li class="head-ul-li2">
+						<a href="index.html" style="background: #9b0909;">推荐</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="leaderBoard.html">排行榜</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="songList.html">歌单</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="radioHost.html">主播电台</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="singer.html">歌手</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="newDisc.html">新碟上架</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div id="body">
+			<div class="banner">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<div class="downLoadPic">
+						<a href="downLoad.html" target="_blank"></a>
+					</div>
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="5"></li>						
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="img/car-pic1.PNG" alt="">
+						</div>
+						<div class="item">
+							<img src="img/car-pic2.PNG">
+						</div>
+						<div class="item">
+							<img src="img/car-pic3.PNG">
+						</div>
+						<div class="item">
+							<img src="img/car-pic4.PNG">
+						</div>
+						<div class="item">
+							<img src="img/car-pic5.PNG">
+						</div>
+						<div class="item">
+							<img src="img/car-pic6.PNG">
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="col-md-9">
+					<!--推荐部分-->
+					<div class="circle">						
+					</div>
+					<h4>热门推荐</h4>
+					<ul>
+						<li>
+							<a href="nothing.html">华语</a>
+						</li>
+						<li>
+							<a href="nothing.html">流行</a>
+						</li>
+						<li>
+							<a href="nothing.html">摇滚</a>
+						</li>
+						<li>
+							<a href="nothing.html">民谣</a>
+						</li>
+						<li>
+							<a href="nothing.html">电子</a>
+						</li>
+					</ul>
+					<a href="nothing.html" style="color: gray;">更多</a>
+					<hr style="border:1.2px solid #c10d0c;margin: 5px 0px;" />
+					<div class="tj">				
+						<div class="row1">
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic1.png" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html">【欧美私人订制】 懂你的欧美每日推荐</a>							        							   
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic2.jpg" onclick="javascript:location.href='nothing.html'">							    						        
+								    <a href="nothing.html">用一首歌的时间，把故事讲完</a>							        							   
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic3.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html">微醺慵懒式 | 文艺青年的复古趴</a>							        							    
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic4.png" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html"> 【电台节目】别找我麻烦-卡莎</a>							        							    
+							    </div>
+							</div>
+						</div>	
+						<div class="row2">
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic5.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html">【精选】欧美踩点混剪bgm燃向/剧情向</a>							        							    
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic6.png" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html"> 【电台节目】#银临#+月球</a>							        							    
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic7.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+								    <a href="nothing.html">听完，恭喜你获得了与孤独和解的能力</a>							        							   
+							    </div>
+							</div>
+							<div class="col-md-3">
+							    <div class="thumbnail">
+								    <img src="img/tj-pic8.png" onclick="javascript:location.href='nothing.html'">							   							        
+								    <a href="nothing.html">【电台节目】那些年，那个女孩</a>							        							    
+							    </div>
+							</div>						
+						</div>
+					</div>
+					<!--新碟-->
+					<div class="circle">						
+					</div>
+					<h4 style="margin-right: 500px;margin-bottom: 0px;">新碟上架</h4>					
+					<a href="nothing.html" style="color: gray;margin-top: 15px;display: block;">更多</a>
+					<hr style="border:1.2px solid #c10d0c;margin: 5px 0px;" />
+					<div class="xd">
+						<span class="previous">
+							
+						</span>
+						<div class="xd-change"">
+							<div class="xd-change1">
+								<div class="xd-pic">
+									<img src="img/xd-pic1.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+									<a href="nothing.html">color on me</a>
+									<a href="nothing.html">姜丹尼尔</a>
+								</div>
+								<div class="xd-pic">
+									<img src="img/xd-pic2.png" onclick="javascript:location.href='nothing.html'">							    							        
+									<a href="nothing.html">天気の子</a>
+									<a href="nothing.html">RADWIMPS</a>
+								</div>
+								<div class="xd-pic">
+									<img src="img/xd-pic3.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+									<a href="nothing.html">No.6 Collaborations Project</a>
+									<a href="nothing.html">Ed Sheeran</a>
+								</div>
+								<div class="xd-pic">
+									<img src="img/xd-pic4.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+									<a href="nothing.html">bad guy (with Justin Bieber)</a>
+									<a href="nothing.html">Billie Eilish / Justin Bieber</a>
+								</div>
+								<div class="xd-pic">
+									<img src="img/xd-pic5.png" onclick="javascript:location.href='nothing.html'">							    							        
+									<a href="nothing.html">流淌的美好时光 影视原声带</a>
+									<a href="nothing.html">群星</a>
+								</div>
+							</div>
+							<div class="xd-change2">							
+							<div class="xd-pic">
+								<img src="img/xd-pic6.png" onclick="javascript:location.href='nothing.html'">							    							        
+								<a href="nothing.html">中国话</a>
+								<a href="nothing.html">朱星杰</a>
+							</div>
+							<div class="xd-pic">
+								<img src="img/xd-pic7.png" onclick="javascript:location.href='nothing.html'">							    							        
+								<a href="nothing.html">明明</a>
+								<a href="nothing.html">摩登兄弟刘宇宁</a>
+							</div>
+							<div class="xd-pic">
+								<img src="img/xd-pic8.png" onclick="javascript:location.href='nothing.html'">							    							        
+								<a href="nothing.html">好喜欢你</a>
+								<a href="nothing.html">颜人中</a>
+							</div>
+							<div class="xd-pic">
+								<img src="img/xd-pic9.png" onclick="javascript:location.href='nothing.html'">							    							        
+								<a href="nothing.html">Save the Night</a>
+								<a href="nothing.html">Far East Movement 远东韵律</a>
+							</div>
+							<div class="xd-pic">
+								<img src="img/xd-pic10.jpg" onclick="javascript:location.href='nothing.html'">							    							        
+								<a href="nothing.html">The Sailor</a>
+								<a href="nothing.html">Rich Brian</a>
+							</div>
+						</div>
+						</div>						
+						<span class="next">
+							
+						</span>
+					</div>
+					<!--榜单-->
+					<div class="circle">						
+					</div>
+					<h4 style="margin-right: 500px;margin-bottom: 0px;">榜单</h4>					
+					<a href="nothing.html" style="color: gray;margin-top: 15px;display: block;">更多</a>
+					<hr style="border:1.2px solid #c10d0c;margin: 5px 0px;" />
+					<div class="bd">
+						<div class="bs-example" data-example-id="bordered-table">
+						    <table class="table table-bordered">
+						      <thead>
+						        <tr>
+						          <th>排名</th>
+						          <th class="bd-pic1"><a href="nothing.html">云音乐飙升榜</a></th>
+						          <th class="bd-pic2"><a href="nothing.html">云音乐新歌榜</a></th>
+						          <th class="bd-pic3"><a href="nothing.html">网易原创歌曲榜</a></th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <th scope="row" style="color: red;">1</th>
+						          <td><a href="nothing.html">放学后</a></td>
+						          <td><a href="nothing.html">无名之辈</a></td>
+						          <td><a href="nothing.html">由于时间与地域的关系</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row" style="color: red;">2</th>
+						          <td><a href="nothing.html">这一生关于你的风景</a></td>
+						          <td><a href="nothing.html">四块五</a></td>
+						          <td><a href="nothing.html">唱情歌</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row" style="color: red;">3</th>
+						          <td><a href="nothing.html">有一种悲伤</a></td>
+						          <td><a href="nothing.html">这么久没见</a></td>
+						          <td><a href="nothing.html">春心动</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">4</th>
+						          <td><a href="nothing.html">大碗宽面</a></td>
+						          <td><a href="nothing.html">多想在平庸的生活拥抱你</a></td>
+						          <td><a href="nothing.html">活着很累</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">5</th>
+						          <td><a href="nothing.html">你会爱上我吗</a></td>
+						          <td><a href="nothing.html">把孤独当做晚餐</a></td>
+						          <td><a href="nothing.html">我不需要</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">6</th>
+						          <td><a href="nothing.html">卑</a></td>
+						          <td><a href="nothing.html">离岸</a></td>
+						          <td><a href="nothing.html">执迷不悟</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">7</th>
+						          <td><a href="nothing.html">突然想爱你</a></td>
+						          <td><a href="nothing.html">我曾</a></td>
+						          <td><a href="nothing.html">你在谁的回忆里头</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">8</th>
+						          <td><a href="nothing.html">OPEN TO MORE</a></td>
+						          <td><a href="nothing.html">牛奶面包</a></td>
+						          <td><a href="nothing.html">天空是灰色你是蓝色</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">9</th>
+						          <td><a href="nothing.html">蓉城往事</a></td>
+						          <td><a href="nothing.html">关于孤独我想说的话</a></td>
+						          <td><a href="nothing.html">日落前</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row">10</th>
+						          <td><a href="nothing.html">千秋蹈火</a></td>
+						          <td><a href="nothing.html">都走了 (Live)</a></td>
+						          <td><a href="nothing.html">没什么大不了</a></td>
+						        </tr>
+						        <tr>
+						          <th scope="row"></th>
+						          <td><a href="nothing.html">查看全部></a></td>
+						          <td><a href="nothing.html">查看全部></a></td>
+						          <td><a href="nothing.html">查看全部></a></td>
+						        </tr>
+						        
+						      </tbody>
+						    </table>
+						</div>
+							    
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="dl">
+						<p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+						<a href="downLoad.html" target="_blank"></a>
+					</div>
+					<div class="gs">
+						<a href="nothing.html" style="margin-right: 80px;">入驻歌手</a>
+						<a href="nothing.html">查看全部></a>
+						<hr style="margin: 0;" />
+						<ul>
+							<li><a href="nothing.html" style="background: url(img/gs-pic1.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/gs-pic2.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/gs-pic3.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/gs-pic4.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/gs-pic5.PNG) no-repeat  top left; "></a></li>
+						</ul>
+						<a class="yyr" href="nothing.html">申请成为网易音乐人</a>
+					</div>
+					<div class="zb">
+						<a href="nothing.html" style="margin-right: 80px;">热门主播</a>
+						<a href="nothing.html">查看全部></a>
+						<hr style="margin: 0;" />
+						<ul>
+							<li><a href="nothing.html" style="background: url(img/zb-pic1.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/zb-pic2.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/zb-pic3.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/zb-pic4.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/zb-pic5.PNG) no-repeat  top left; "></a></li>
+						</ul>
+						<a class="yyr" href="nothing.html">申请成为网易音乐人</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="top">
+			
+		</div>
+
+		<div id="footer">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="col-md-8">
+						<ul>
+							<li>
+								<a href="nothing.html">服务条款</a>
+							</li>|
+							<li>
+								<a href="nothing.html">隐私政策</a>
+							</li>|
+							<li>
+								<a href="nothing.html">版权投诉指引</a>
+							</li>|
+							<li>
+								<a href="nothing.html">意见反馈</a>
+							</li>
+						</ul>
+						<p>网易公司版权所有©1997-2019&nbsp;&nbsp;杭州乐读科技有限公司运营：
+							<a href="nothing.html">浙网文[2018]3506-263号</a>
+						</p>
+						<p>违法和不良信息举报电话：&nbsp;&nbsp;0571-89853516 举报邮箱：
+							<a href="nothing.html">ncm5990@163.com</a>
+						</p>
+					</div>
+					<div class="col-md-4">
+						<a href="nothing.html" id="footer-a1"></a>
+						<a href="music man.html" target="_blank" id="footer-a2"></a>
+						<a href="nothing.html" id="footer-a3"></a>
+						<a href="nothing.html" id="footer-a4"></a>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var left = 0;
+				$(".next").click(function(){					
+					
+					if(left==0){
+						$(".xd-change").animate({left:'-615.09px'},"slow");
+						left=1;
+					}								
+				})
+				$(".previous").click(function(){
+					if(left==1){
+						$(".xd-change").animate({left:'30px'},"slow");
+						left=0;
+					}										
+				})
+				$(".top").click(function(){
+	//				$(window).scrollTop(0); 回到顶部 无动画
+	                $('html,body').animate({"scrollTop":"0px"},100);
+			    })
+			    $(window).scroll(function(){
+					console.log($(window).scrollTop());					
+					if($(window).scrollTop()>200){
+						$(".top").fadeIn();
+					}else $(".top").fadeOut();					
+				})
+			})
+		</script>
+	</body>
+
+</html>

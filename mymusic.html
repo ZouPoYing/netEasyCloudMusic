@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<link rel="stylesheet" type="text/css" href="css/wangyiyun.css"/>
+		<style type="text/css">
+			/*返回顶部*/
+
+			.top {
+				width: 50px;
+				height: 50px;
+				background: url(img/top.PNG) no-repeat top center;
+				position: fixed;
+				text-align: center;
+				border: 1px solid gainsboro;
+				border-radius: 2px;
+				bottom: 200px;
+				right: 200px;
+			}
+			#link-home {
+				display: block;
+				width: 177px;
+				height: 70px;
+				background: url(img/icon-wyy.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin-left: 200px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head-black">
+				<a href="index.html" id="link-home"></a>
+				<ul>
+					<li class="head-ul-li">
+						<a href="index.html">发现音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="myMusicUnlogged.html">我的音乐</a>
+					</li>
+					<li class="head-ul-li" style="background: black;">
+						<a href="friendUnloged.html">朋友</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="musicStore.html" target="_blank">商城</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="music man.html" target="_blank">音乐人</a>
+					</li>
+					<li class="head-ul-li">
+						<img id="a-hot" src="img/HOT.png"/ >
+						<a href="downLoad.html" target="_blank">下载客户端</a>
+					</li>
+				</ul>
+				<div class="input-sreach">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1"></span>
+						<input type="text" class="form-control" placeholder="音乐/视频/电台/用户" aria-describedby="basic-addon1">
+					</div>
+					<button id="authors">创作者中心</button>
+					<div class="dropdown clearfix">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					        登陆
+					        <span class="caret"></span>
+					    </button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+							<li>
+								<a href="#">手机号登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">微信登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">QQ登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">新浪微博登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">网易邮箱账号登陆</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="head-red">				
+			</div>
+		</div>
+		
+		<div class="box">
+
+			<div class="container">
+				<!--定位的-->
+				<div class="song-info pull-left">
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+										<a class="btn">
+											我的歌手(7)
+										</a>
+									</h4>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+										<a class="btn">
+											我的视频(21)
+										</a>
+									</h4>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel-group" id="songlist">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+										<span data-toggle="collapse" data-parent="#songlist" 
+										   href="#collapseTwo">
+											创建的歌单®&nbsp;&nbsp;&nbsp;&nbsp;(2)
+										</span>
+									</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<img src="img/mymusic/songlist1.jpg"/><a class="btn">我喜欢的音乐</a>
+								</div>
+								<div class="panel-body">
+									<img src="img/mymusic/songlist2.jpg"/><a class="btn">土味dj</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel-group" id="collected">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+										<span data-toggle="collapse" data-parent="#collected" 
+										   href="#collapseOne">
+											收藏的歌单®&nbsp;&nbsp;&nbsp;&nbsp;(2)
+										</span>
+									</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<img src="img/mymusic/songlist3.jpg"/><a class="btn">轻柔歌曲</a>
+								</div>
+								<div class="panel-body">
+									<img src="img/mymusic/songlist4.jpg"/><a class="btn">泰勒斯威夫特</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--我的歌手-->
+				<div class="song-list pull-right" style="display: none;">
+					<div class="mySonger container">
+						<span class="songer-text">
+							我的歌手(12)
+						</span>
+						<ul>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>
+							<li>
+								<span class="songer_photo"><img src="img/mymusic/3.jpg"/></span>
+								<b><a href="">周子琰</a></b>
+								<p>20个专辑&nbsp;&nbsp;&nbsp;22个MV</p>
+							</li>							
+						</ul>
+					</div>
+				</div>
+				<!--我的视频-->
+				<div class="song-list pull-right" style="display: none;">
+					<div class="mySonger container">
+						<!--标题-->
+						<span class="songer-text">
+							我的视频(12)
+						</span>
+						<!--视频详情1列-->
+						<div class="row">
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						</div>
+						<!--视频详情2列-->
+						<div class="row">
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						</div>
+						<!--视频详情3列-->
+						<div class="row">
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						</div>
+						<!--视频详情4列-->
+						<div class="row">
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						</div>
+						<!--视频详情4列-->
+						<div class="row"5>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						  <div class="col-md-3">
+						  	<span><img src="img/mymusic/video/3.jpg"/></span>
+						  	<span><img src="img/mymusic/mv.png"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Dear X</a></span>
+						  	<a href="#">NINEONE#</a>
+						  </div>
+						</div> 
+						 
+					</div>
+				</div>
+				<!--我喜欢的音乐-->
+				<div class="song-list pull-right">
+					<div class=" musicbox_header">
+						<div class=" musicbox-img">
+							<img src="img/mymusic/2.jpg" />
+
+						</div>
+						<!--icon-->
+						<div class="musicbox-info">
+							<span>
+								<img src="img/mymusic/songlist.png"/>我喜欢的音乐
+							</span>
+							<span>
+								<img src="img/mymusic/3.jpg"/>
+								<p><a href="">树袋熊没有萝卜</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-03-31 创建</p>
+							</span>
+							
+							<div class="musicbox-btn">
+								<!--<span>播放</span>
+								<span></span>
+								<span>收藏</span>
+								<span>分享</span>
+								<span>下载</span>
+								<span>评论</span>-->
+								<ul>
+									<li><b>播放</b></li>
+									<li></li>
+									<li><b>播放</b></li>
+									<li><b>分享</b></li>
+									<li><b>下载</b></li>
+									<li><b>评论</b></li>
+								</ul>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<!--表头-->
+					<div class="music-til">
+						<div class="musicbox-title">
+							<p class="">歌曲列表</p>
+							<p class="">27首歌</p>
+							<p class="pull-right">播放：<span>6625</span>次</p>
+						</div>
+					</div>
+					<!--表格-->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+									<th></th>
+									<th>歌曲标题</th>
+									<th>时长</th>
+									<th>歌手</th>
+									<th>专辑</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><a href="#" style="color: black;">Bangalore</a></td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+				<!--其他歌单1-->
+				<div class="song-list pull-right" style="display: none;">
+					<div class=" musicbox_header">
+						<div class=" musicbox-img">
+							<img src="img/mymusic/5.jpg" />
+						</div>
+						<!--icon-->
+						<div class="musicbox-info">
+							<span>
+								<img src="img/mymusic/songlist.png"/>我喜欢的音乐
+							</span>
+							<span>
+								<img src="img/mymusic/3.jpg"/>
+								<p><a href="">树袋熊没有萝卜</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-03-31 创建</p>
+							</span>
+							
+							<div class="musicbox-btn">
+								<!--<span>播放</span>
+								<span></span>
+								<span>收藏</span>
+								<span>分享</span>
+								<span>下载</span>
+								<span>评论</span>-->
+								<ul>
+									<li><b>播放</b></li>
+									<li></li>
+									<li><b>播放</b></li>
+									<li><b>分享</b></li>
+									<li><b>下载</b></li>
+									<li><b>评论</b></li>
+								</ul>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<!--表头-->
+					<div class="music-til">
+						<div class="musicbox-title">
+							<p class="">歌曲列表</p>
+							<p class="">27首歌</p>
+							<p class="pull-right">播放：<span>6625</span>次</p>
+						</div>
+					</div>
+					<!--表格-->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+									<th></th>
+									<th>歌曲标题</th>
+									<th>时长</th>
+									<th>歌手</th>
+									<th>专辑</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--其他歌单2-->
+				<div class="song-list pull-right" style="display: none;">
+					<div class=" musicbox_header">
+						<div class=" musicbox-img">
+							<img src="img/mymusic/7.jpg" />
+
+						</div>
+						<!--icon-->
+						<div class="musicbox-info">
+							<span>
+								<img src="img/mymusic/songlist.png"/>我喜欢的音乐
+							</span>
+							<span>
+								<img src="img/mymusic/3.jpg"/>
+								<p><a href="">树袋熊没有萝卜</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-03-31 创建</p>
+							</span>
+							
+							<div class="musicbox-btn">
+								<!--<span>播放</span>
+								<span></span>
+								<span>收藏</span>
+								<span>分享</span>
+								<span>下载</span>
+								<span>评论</span>-->
+								<ul>
+									<li><b>播放</b></li>
+									<li></li>
+									<li><b>播放</b></li>
+									<li><b>分享</b></li>
+									<li><b>下载</b></li>
+									<li><b>评论</b></li>
+								</ul>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<!--表头-->
+					<div class="music-til">
+						<div class="musicbox-title">
+							<p class="">歌曲列表</p>
+							<p class="">27首歌</p>
+							<p class="pull-right">播放：<span>6625</span>次</p>
+						</div>
+					</div>
+					<!--表格-->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+									<th></th>
+									<th>歌曲标题</th>
+									<th>时长</th>
+									<th>歌手</th>
+									<th>专辑</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--其他歌单3-->
+				<div class="song-list pull-right" style="display: none;">
+					<div class=" musicbox_header">
+						<div class=" musicbox-img">
+							<img src="img/mymusic/6.jpg" />
+
+						</div>
+						<!--icon-->
+						<div class="musicbox-info">
+							<span>
+								<img src="img/mymusic/songlist.png"/>我喜欢的音乐
+							</span>
+							<span>
+								<img src="img/mymusic/3.jpg"/>
+								<p><a href="">树袋熊没有萝卜</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-03-31 创建</p>
+							</span>
+							
+							<div class="musicbox-btn">
+								<!--<span>播放</span>
+								<span></span>
+								<span>收藏</span>
+								<span>分享</span>
+								<span>下载</span>
+								<span>评论</span>-->
+								<ul>
+									<li><b>播放</b></li>
+									<li></li>
+									<li><b>播放</b></li>
+									<li><b>分享</b></li>
+									<li><b>下载</b></li>
+									<li><b>评论</b></li>
+								</ul>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					<!--表头-->
+					<div class="music-til">
+						<div class="musicbox-title">
+							<p class="">歌曲列表</p>
+							<p class="">27首歌</p>
+							<p class="pull-right">播放：<span>6625</span>次</p>
+						</div>
+					</div>
+					<!--表格-->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+									<th></th>
+									<th>歌曲标题</th>
+									<th>时长</th>
+									<th>歌手</th>
+									<th>专辑</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+							<tr>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+								<td>Bangalore</td>
+								<td>Tanmay</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+			
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			/*	$(".btn").click(function(){
+				
+				console.log($(this).index());
+				$(this).css("color","gainsboro");
+				for (var i = 0;i<$(".show").length;i++) {
+					$(".show").eq(i).css("display","none");
+				}
+				$(".show").eq($(this).index()).css("display","block");
+				
+				 
+			})*/
+				/*$(".song-list")eq(2).css("display","none");*/
+				
+				var aList = document.getElementsByClassName('btn');
+			    for (var i = 0; i < aList.length; i++) {
+			        var a = aList[i];
+			        a.index = i;
+			        a.onclick = function () {
+			            
+			            for (var i = 0;i<$(".song-list").length;i++) {
+							$(".song-list").eq(i).css("display","none");
+						}
+						$(".song-list").eq(this.index-1).css("display","block");
+						console.log(this.index);
+						
+			        }
+			    }
+			    
+ 
+			})
+		</script>
+		
+	</body>
+
+</html>

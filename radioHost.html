@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			html {
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+			
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+			/*head*/
+			
+			#head {
+				width: 1519px;
+				height: 105px;
+			}
+			
+			#head #head-black {
+				position: relative;
+				width: 1519px;
+				height: 70px;
+				background: #242424;
+			}
+			
+			#head #head-red {
+				width: 1519px;
+				height: 35px;
+				background: #c20c0c;
+			}
+			
+			#link-home {
+				display: block;
+				width: 177px;
+				height: 70px;
+				background: url(img/icon-wyy.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin-left: 200px;
+			}
+			
+			.head-ul-li {
+				width: 94px;
+				height: 70px;
+				display: block;
+				list-style: none;
+				float: left;
+				text-align: center;
+			}
+			
+			.head-ul-li a {
+				display: block;
+				margin: 25px 10px 10px 10px;
+				color: white;
+				font-size: 14px;
+				text-decoration: none;
+			}
+			
+			.head-ul-li:hover {
+				background: black;
+			}
+			
+			#a-hot {
+				position: absolute;
+				top: 10px;
+				right: 565px;
+				width: 25px;
+				/*background: url(img/HOT.png) no-repeat top -20px right;
+				background-size: 28px;*/
+			}
+			
+			.input-group {
+				position: relative;
+				width: 158px;
+				left: 20px;
+			}
+			
+			.input-group-addon {
+				/*position: absolute;*/
+				height: 34px;
+				width: 30px;
+				background: url(img/sousuo.png) no-repeat top 3px center;
+				background-size: 20px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				background-color: white;
+				outline: none;
+				display: inline-block;
+				margin-top: 10px;
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.form-control {
+				position: absolute;
+				/*position: absolute;*/
+				right: -40px;
+				top: -44px;
+				float: left;
+				height: 34px;
+				width: 220px;
+				border: none;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				outline: none;
+				display: inline-block;
+				margin-top: 10px;
+			}
+			
+			#authors {
+				position: absolute;
+				top: 12px;
+				right: 250px;
+				width: 90px;
+				height: 36px;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				/*float: left;*/
+				background: none;
+				border: 1px solid gainsboro;
+				color: white;
+				font-size: 12px;
+				display: inline-block;
+				outline: none;
+			}
+			
+			#authors:hover {
+				border: 2px solid white;
+			}
+			
+			.clearfix {
+				position: absolute;
+				right: 180px;
+				top: 12px;
+			}
+			
+			#dropdownMenuDivider {
+				background: black;
+				border: 1px solid white;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				color: white;
+				outline: none;
+			}
+			
+			#dropdownMenuDivider:hover {
+				border: 2px solid white;
+			}
+			
+			#head-red ul {
+				position: absolute;
+				width: 1519px;
+				height: 35px;
+				left: 330px;
+				margin-bottom: 0px;
+			}
+			
+			#head-red ul .head-ul-li2 {
+				width: 110px;
+				height: 35px;
+				display: block;
+				list-style: none;
+				float: left;
+				text-align: center;				
+			}
+			
+			#head-red ul .head-ul-li2 a {
+				display: block;
+				height: 18px;
+				margin: 10px 20px 10px 20px;
+				color: white;
+				font-size: 12px;
+				text-decoration: none;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+			}
+			
+			#head-red ul .head-ul-li2 a:hover {
+				background: #9b0909;
+			}
+			/*返回顶部*/
+			.top{
+				width: 50px;
+				height: 50px;
+				background: url(img/top.PNG) no-repeat  top center;
+				position: fixed;								
+				text-align: center;
+				border: 1px solid gainsboro;
+				border-radius: 2px;
+				bottom: 200px;
+				right: 200px;
+			}
+			/*footer*/
+			
+			
+			#footer .row {
+				width: 1535px;
+				height: 150px;
+				background: #f2f2f2;
+				display: inline-block;
+			}
+			
+			#footer .row .col-md-8 {
+				height: 150px;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 ul li {
+				display: inline-block;
+				margin-right: 10px;
+				margin-top: 20px;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 ul li a {
+				list-style: none;
+				color: gray;
+			}
+			
+			#footer .row .col-md-8 .col-md-8 p a {
+				color: black;
+			}
+			
+			#footer-a1 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a1.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a2 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a2.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a3 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a3.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a4 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a4.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			/*body*/
+			#body .col-md-8{
+				height: 1500px;
+				border-top:  1px solid gainsboro;
+				border-bottom:  1px solid gainsboro;
+			}
+			#body .col-md-2{
+				height: 1500px;
+				background: #f5f5f5;
+				border: 1px solid gainsboro;
+			}			
+			#body .col-md-8 .xd{             	
+            	height: 300px;   
+            	background:  #f5f5f5; 
+            	border: 1px solid gainsboro;
+            	overflow: hidden;  	
+            }
+            #body .col-md-8 .xd .previous{ 
+            	position: absolute;
+            	width: 30px;            	
+            	height: 200px;   
+            	background: url(img/previous.PNG) no-repeat  top 60px center;
+            	background-size: 100%;
+            	display: block; 
+            	left: 15px;
+            	float: left;  
+            	z-index: 1;        	           	 	
+            }
+            #body .col-md-8 .xd .next{ 
+            	position: absolute;
+            	width: 30px;            	
+            	height: 200px;   
+            	background: url(img/next.PNG) no-repeat  top 60px center;
+            	background-size: 100%;
+            	display: block;
+            	right: 15px;  
+            	float: right;
+            	z-index: 1;             	 	
+            }
+            #body .col-md-8 .xd .xd-change{ 
+            	width: 1965.58px;            	
+            	height: 300px;   
+            	background:  #f2f2f2; 
+            	float: left;
+            	left: 30px;    
+            	overflow: hidden;
+            	position: relative;           	 	
+            }
+            #body .col-md-8 .xd .xd-change .xd-change1,.xd-change2{ 
+            	width: 982.79px;            	
+            	height: 300px;   
+            	background:  #f2f2f2; 
+            	float: left; 
+            	              	 	
+            }
+            .xd-change2{            	
+            	left: 982.79px;
+            }
+            #body .col-md-8 .xd .xd-change .xd-pic{ 
+            	width: 72px;            	
+            	height: 72px;   
+            	margin: 40px 20px 20px 20px;
+            	float: left;               	 	
+            }
+            #body .col-md-8 .xd .xd-change .xd-pic img{ 
+            	width: 72px;            	
+            	height: 72px;               	            	 	
+            }
+            #body .col-md-8 .tj{             	           	
+            	height: 700px;              	          	 	
+            }
+            #body .col-md-8 .tj .col-md-6{             	           	
+            	height: 700px;                 	   	          	 	
+            }  
+            #body .col-md-8 .tj .col-md-6 a{ 
+            	color: gray;            	           		   	            	           	 	
+            } 
+            #body .col-md-8 .tj .col-md-6 ul li{ 
+            	display: block;
+            	margin: 20px 0px 20px 0px;
+            	width: 400px;
+            	height: 75px; 
+            	list-style: none;           	           	          	           		   	            	           	 	
+            }
+            #body .col-md-8 .tj .col-md-6 ul li a{ 
+            	display: block;            	
+            	width: 400px;
+            	height: 75px;            	            	 
+            	background-size: 100%;
+            	border: 1px solid gainsboro;         	           		   	            	           	 	
+            }               
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head-black">
+				<a href="index.html" id="link-home"></a>
+				<ul>
+					<li class="head-ul-li" style="background: black;">
+						<a href="index.html">发现音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="myMusicUnlogged.html">我的音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="friendUnloged.html">朋友</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="musicStore.html" target="_blank">商城</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="music man.html" target="_blank">音乐人</a>
+					</li>
+					<li class="head-ul-li">
+						<img id="a-hot" src="img/HOT.png" />
+						<a href="downLoad.html" target="_blank">下载客户端</a>
+					</li>
+				</ul>
+				<div class="input-sreach">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1"></span>
+						<input type="text" class="form-control" placeholder="音乐/视频/电台/用户" aria-describedby="basic-addon1">
+					</div>
+					<button id="authors">创作者中心</button>
+					<div class="dropdown clearfix">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					        登陆
+					        <span class="caret"></span>
+					    </button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+							<li>
+								<a href="nothing.html">手机号登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">微信登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">QQ登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">新浪微博登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="nothing.html">网易邮箱账号登陆</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="head-red">
+				<ul>
+					<li class="head-ul-li2">
+						<a href="index.html" >推荐</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="leaderBoard.html">排行榜</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="songList.html">歌单</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="radioHost.html" style="background: #9b0909;">主播电台</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="singer.html">歌手</a>
+					</li>
+					<li class="head-ul-li2">
+						<a href="newDisc.html">新碟上架</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div id="body">			
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="xd">
+						<span class="previous">
+							
+						</span>
+						<div class="xd-change"">
+							<div class="xd-change1">
+								<div class="xd-pic">
+									<img src="img/话筒.png" title="创作翻唱" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/耳机.png" title="3D电子" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/笑脸.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/音符.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/动漫.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/书.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/灯泡.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/走势图.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/记录.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/abc 搜索词详情.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/亲子成长.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/扇子.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/读书.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/人物.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/电影.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/科学.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+							</div>
+							<div class="xd-change2">							
+							<div class="xd-pic">
+									<img src="img/校园一卡通.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/飞机.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/问题.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								<div class="xd-pic">
+									<img src="img/直播.png" title="情感调频" onclick="javascript:location.href='nothing.html'">							    							        									
+								</div>
+								
+						    </div>
+						</div>						
+						<span class="next">
+							
+						</span>
+					</div>
+				<div class="tj">
+					<div class="col-md-6">
+						<a href="nothing.html" style="margin-right: 280px;color: black;font-size: 30px;">推荐节目</a>
+						<a href="nothing.html">更多></a>
+						<hr style="margin: 0;border:1.2px solid #c10d0c;" />
+						<ul>
+							<li><a href="nothing.html" style="background: url(img/li-pic1.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic2.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic3.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic4.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic5.PNG) no-repeat  top left; "></a></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<a href="nothing.html" style="margin-right: 260px;color: black;font-size: 30px;">节目排行榜</a>
+						<a href="nothing.html">更多></a>
+						<hr style="margin: 0;border:1.2px solid #c10d0c;" />
+						<ul>
+							<li><a href="nothing.html" style="background: url(img/li-pic6.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic7.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic8.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic9.PNG) no-repeat  top left; "></a></li>
+							<li><a href="nothing.html" style="background: url(img/li-pic10.PNG) no-repeat  top left; "></a></li>
+						</ul>
+					</div>
+				</div>	
+					
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div id="footer">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="col-md-8">
+						<ul>
+							<li>
+								<a href="nothing.html">服务条款</a>
+							</li>|
+							<li>
+								<a href="nothing.html">隐私政策</a>
+							</li>|
+							<li>
+								<a href="nothing.html">版权投诉指引</a>
+							</li>|
+							<li>
+								<a href="nothing.html">意见反馈</a>
+							</li>
+						</ul>
+						<p>网易公司版权所有©1997-2019&nbsp;&nbsp;杭州乐读科技有限公司运营：
+							<a href="nothing.html">浙网文[2018]3506-263号</a>
+						</p>
+						<p>违法和不良信息举报电话：&nbsp;&nbsp;0571-89853516 举报邮箱：
+							<a href="nothing.html">ncm5990@163.com</a>
+						</p>
+					</div>
+					<div class="col-md-4">
+						<a href="nothing.html" id="footer-a1"></a>
+						<a href="music man.html" target="_blank" id="footer-a2"></a>
+						<a href="nothing.html" id="footer-a3"></a>
+						<a href="nothing.html" id="footer-a4"></a>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+			<div class="top">
+			
+		    </div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var left = 0;
+				$(".next").click(function(){					
+					
+					if(left==0){
+						$(".xd-change").animate({left:'-952.79px'},"slow");
+						left=1;
+					}								
+				})
+				$(".previous").click(function(){
+					if(left==1){
+						$(".xd-change").animate({left:'30px'},"slow");
+						left=0;
+					}										
+				})
+				$(".top").click(function(){
+	//				$(window).scrollTop(0); 回到顶部 无动画
+	                $('html,body').animate({"scrollTop":"0px"},100);
+			    })
+			    $(window).scroll(function(){
+					console.log($(window).scrollTop());					
+					if($(window).scrollTop()>200){
+						$(".top").fadeIn();
+					}else $(".top").fadeOut();					
+				})
+			})
+		</script>
+	</body>
+
+</html>

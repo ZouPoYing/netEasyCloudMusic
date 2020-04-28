@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+		<link rel="stylesheet" type="text/css" href="css/friends.css" />
+		<style type="text/css">
+			/*返回顶部*/
+
+			.top {
+				width: 50px;
+				height: 50px;
+				background: url(img/top.PNG) no-repeat top center;
+				position: fixed;
+				text-align: center;
+				border: 1px solid gainsboro;
+				border-radius: 2px;
+				bottom: 200px;
+				right: 200px;
+			}
+			#link-home {
+				display: block;
+				width: 177px;
+				height: 70px;
+				background: url(img/icon-wyy.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin-left: 200px;
+			}
+			#footer-a1 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a1.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a2 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a2.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a3 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a3.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+			
+			#footer-a4 {
+				display: block;
+				width: 70px;
+				height: 80px;
+				background: url(img/footer-a4.PNG) no-repeat top center;
+				background-size: 100%;
+				float: left;
+				margin: 30px 5px 20px 0px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<div id="head-black">
+				<a href="index.html" id="link-home"></a>
+				<ul>
+					<li class="head-ul-li">
+						<a href="index.html">发现音乐</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="myMusicUnlogged.html">我的音乐</a>
+					</li>
+					<li class="head-ul-li" style="background: black;">
+						<a href="friendUnloged.html">朋友</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="musicStore.html" target="_blank">商城</a>
+					</li>
+					<li class="head-ul-li">
+						<a href="music man.html" target="_blank">音乐人</a>
+					</li>
+					<li class="head-ul-li">
+						<img id="a-hot" src="img/HOT.png"/ >
+						<a href="downLoad.html" target="_blank">下载客户端</a>
+					</li>
+				</ul>
+				<div class="input-sreach">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1"></span>
+						<input type="text" class="form-control" placeholder="音乐/视频/电台/用户" aria-describedby="basic-addon1">
+					</div>
+					<button id="authors">创作者中心</button>
+					<div class="dropdown clearfix">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					        登陆
+					        <span class="caret"></span>
+					    </button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+							<li>
+								<a href="#">手机号登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">微信登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">QQ登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">新浪微博登陆</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">网易邮箱账号登陆</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="head-red">				
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="share-info pull-left">
+					 	<!--动态头-->
+						<div class="share-top center-block">
+							<h3><span class="f-ff2">动态</span></h3>
+								<button type="button" class="btn btn-defaul btn-xs pull-right" >
+									<span class="glyphicon glyphicon-facetime-video"></span>发布视频
+								</button>
+								<button type="button" class="btn btn-defaul btn-xs pull-right" data-toggle="modal" data-target="#myModal">
+									<span class="glyphicon glyphicon-pencil"></span>发动态
+								</button>
+								<!-- 模态框（Modal） -->
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" 
+														aria-hidden="true">×
+												</button>
+												<h4 class="modal-title" id="myModalLabel">
+													分享
+												</h4>
+											</div>
+											<div class="modal-body">
+												<textarea class="center-block" rows="15" cols="70"  style=" resize: none;"></textarea>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" 
+														data-dismiss="modal">取消
+												</button>
+												<button type="button" class="btn btn-primary">
+													分享
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<!--动态信息-->
+					 	<div class="share-items center-block ">
+					 		<!--第1条-->
+					 		<div class="panel panel-default">
+								<div class="panel-body">
+									<img src="img/mymusic/tailyo.jpg"/>
+									<!--用户介绍-->
+									<span class="usersinfo">
+										<!--用户名-->
+										<p><a href="/user/home?id=34348307" class="s-fc7" >肆囍乐队</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布视频</p>
+										<!--小图标-->
+										<span>
+											<img src="img/friends/musicIcon.png"/>
+										</span>
+										<!--用户操作状态-->
+										<p></p>
+										<!--关注按钮-->
+										<span class="s-fc4" >最近</span>
+										<!--下拉操作-->
+										<span>
+											<button type="button" class="btn btn-default btn-xs">
+												<span class="glyphicon glyphicon-plus" style="color:#C62408"></span> 关注
+											</button>
+											<span class="selText">
+												<div class="dropdown">
+													<span id="dropdownMenu1" data-toggle="dropdown">
+														∨
+													</span>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">不感兴趣，减少这类推荐</a>
+														</li>
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">
+																不再显示推荐动态
+															</a>
+														</li> 
+													</ul>
+												</div>
+												
+											</span>
+										</span>
+									</span>
+									<!--发布时间-->
+									 
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<p>是你对爱情的样子吗？</p>
+										<span>
+											<img src="img/mymusic/songlist2.jpg"/>
+											<a href="#">Lost In Japan</a>
+											<a href="#">Shawn Mendes</a>
+										</span>
+									</li>
+									<li class="list-group-item">
+										<span>
+											<img src="img/friends/6666.jpg"/>
+										</span>
+									</li>
+							 		<li class="list-group-item">
+							 			<span>
+							 				<img src="img/friends/prime.png"/>
+							 				<a href="#">(4455)</a>
+							 				<b>|</b>
+							 				<a href="#">转发(11)</a>
+							 				<b>|</b>
+							 				<a href="#">评论(421)</a>
+							 			</span>
+							 		</li>
+								</ul>
+							</div>		
+							<!--第2条-->
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<img src="img/mymusic/tailyo.jpg"/>
+									<!--用户介绍-->
+									<span class="usersinfo">
+										<!--用户名-->
+										<p><a href="/user/home?id=34348307" class="s-fc7" >肆囍乐队</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布视频</p>
+										<!--小图标-->
+										<span>
+											<img src="img/friends/musicIcon.png"/>
+										</span>
+										<!--用户操作状态-->
+										<p></p>
+										<!--关注按钮-->
+										<span class="s-fc4" >最近</span>
+										<!--下拉操作-->
+										<span>
+											<button type="button" class="btn btn-default btn-xs">
+												<span class="glyphicon glyphicon-plus" style="color:#C62408"></span> 关注
+											</button>
+											<span class="selText">
+												<div class="dropdown">
+													<span id="dropdownMenu1" data-toggle="dropdown">
+														∨
+													</span>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">不感兴趣，减少这类推荐</a>
+														</li>
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">
+																不再显示推荐动态
+															</a>
+														</li> 
+													</ul>
+												</div>
+												
+											</span>
+										</span>
+									</span>
+									<!--发布时间-->
+									 
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<p>是你对爱情的样子吗？</p>
+										<span>
+											<img src="img/mymusic/songlist2.jpg"/>
+											<a href="#">Lost In Japan</a>
+											<a href="#">Shawn Mendes</a>
+										</span>
+									</li>
+									<li class="list-group-item">
+										<span></span>
+									</li>
+							 		<li class="list-group-item">
+							 			<span>
+							 				<img src="img/friends/prime.png"/>
+							 				<a href="#">(4455)</a>
+							 				<b>|</b>
+							 				<a href="#">转发(11)</a>
+							 				<b>|</b>
+							 				<a href="#">评论(421)</a>
+							 			</span>
+							 		</li>
+								</ul>
+							</div>
+							<!--第3条-->
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<img src="img/mymusic/tailyo.jpg"/>
+									<!--用户介绍-->
+									<span class="usersinfo">
+										<!--用户名-->
+										<p><a href="/user/home?id=34348307" class="s-fc7" >肆囍乐队</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布视频</p>
+										<!--小图标-->
+										<span>
+											<img src="img/friends/musicIcon.png"/>
+										</span>
+										<!--用户操作状态-->
+										<p></p>
+										<!--关注按钮-->
+										<span class="s-fc4" >最近</span>
+										<!--下拉操作-->
+										<span>
+											<button type="button" class="btn btn-default btn-xs">
+												<span class="glyphicon glyphicon-plus" style="color:#C62408"></span> 关注
+											</button>
+											<span class="selText">
+												<div class="dropdown">
+													<span id="dropdownMenu1" data-toggle="dropdown">
+														∨
+													</span>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">不感兴趣，减少这类推荐</a>
+														</li>
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">
+																不再显示推荐动态
+															</a>
+														</li> 
+													</ul>
+												</div>
+												
+											</span>
+										</span>
+									</span>
+									<!--发布时间-->
+									 
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<p>是你对爱情的样子吗？</p>
+										<span>
+											<img src="img/mymusic/songlist2.jpg"/>
+											<a href="#">Lost In Japan</a>
+											<a href="#">Shawn Mendes</a>
+										</span>
+									</li>
+									<li class="list-group-item">
+										<span></span>
+									</li>
+							 		<li class="list-group-item">
+							 			<span>
+							 				<img src="img/friends/prime.png"/>
+							 				<a href="#">(4455)</a>
+							 				<b>|</b>
+							 				<a href="#">转发(11)</a>
+							 				<b>|</b>
+							 				<a href="#">评论(421)</a>
+							 			</span>
+							 		</li>
+								</ul>
+							</div>
+							<!--第4条-->
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<img src="img/mymusic/tailyo.jpg"/>
+									<!--用户介绍-->
+									<span class="usersinfo">
+										<!--用户名-->
+										<p><a href="/user/home?id=34348307" class="s-fc7" >肆囍乐队</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布视频</p>
+										<!--小图标-->
+										<span>
+											<img src="img/friends/musicIcon.png"/>
+										</span>
+										<!--用户操作状态-->
+										<p></p>
+										<!--关注按钮-->
+										<span class="s-fc4" >最近</span>
+										<!--下拉操作-->
+										<span>
+											<button type="button" class="btn btn-default btn-xs">
+												<span class="glyphicon glyphicon-plus" style="color:#C62408"></span> 关注
+											</button>
+											<span class="selText">
+												<div class="dropdown">
+													<span id="dropdownMenu1" data-toggle="dropdown">
+														∨
+													</span>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">不感兴趣，减少这类推荐</a>
+														</li>
+														<li role="presentation">
+															<a role="menuitem" tabindex="-1" href="#">
+																不再显示推荐动态
+															</a>
+														</li> 
+													</ul>
+												</div>
+												
+											</span>
+										</span>
+									</span>
+									<!--发布时间-->
+									 
+								</div>
+								<ul class="list-group">
+									<li class="list-group-item">
+										<p>是你对爱情的样子吗？</p>
+										<span>
+											<img src="img/mymusic/songlist2.jpg"/>
+											<a href="#">Lost In Japan</a>
+											<a href="#">Shawn Mendes</a>
+										</span>
+									</li>
+									<li class="list-group-item">
+										<span></span>
+									</li>
+							 		<li class="list-group-item">
+							 			<span>
+							 				<img src="img/friends/prime.png"/>
+							 				<a href="#">(4455)</a>
+							 				<b>|</b>
+							 				<a href="#">转发(11)</a>
+							 				<b>|</b>
+							 				<a href="#">评论(421)</a>
+							 			</span>
+							 		</li>
+								</ul>
+							</div>
+						 
+					 	</div>
+						
+				</div>
+				
+				<div class="person-info pull-right">
+					<!--头像-->
+					<div class="userphoto">
+						<div class="photo">
+							<img src="img/123456.jpg"/>
+						</div>
+						<p>树袋熊</p>
+						<!--动态关注粉丝-->
+						<div class="count">
+							<div class="row">
+							  <div class="col-md-4 count-width">
+							  	<a href="#">
+							  		<em >11</em>
+							  		<i>动态</i>
+							  	</a>
+							  </div>
+							  <div class="col-md-4 count-width">
+							  	<a href="#">
+							  		<em >11</em>
+							  		<i>关注</i></a>
+							  	</a>
+							  </div>
+							  <div class="col-md-4 count-width">
+							  	<a href="#">
+							  		<em >11</em>
+							  		<i>粉丝</i>
+							  	</a>
+							  	
+							  </div>
+							</div>
+						</div>
+					</div>
+					<!--明星用户-->
+					<div class="starts">
+						 
+							<div class="f-cb container">
+								<h4 class="text-center">明星用户</h4>
+								<a href="#" class="more" id="moreStarLink">换一批</a>
+							</div>
+						  	
+						  	<ul class="starts-items container">
+						  		<li>
+						  			<span>
+						  				<img src="img/friends/starts/start1.jpg"/>
+						  			</span>
+						  			<span>
+						  				<a>斯琴高丽</a>
+						  				<img src="img/friends/icon.png"/>
+						  				<p>著名歌手、演员</p>
+						  			</span>
+						  			<i><b>＋</b>关注</i>
+						  		</li>
+						  		<li>
+						  			<span>
+						  				<img src="img/friends/starts/start2.jpg"/>
+						  			</span>
+						  			<span>
+						  				<a>斯琴高丽</a>
+						  				<img src="img/friends/icon.png"/>
+						  				<p>著名歌手、演员</p>
+						  			</span>
+						  			<i><b>＋</b>关注</i>
+						  		</li>
+						  		<li>
+						  			<span>
+						  				<img src="img/friends/starts/start3.jpg"/>
+						  			</span>
+						  			<span>
+						  				<a>斯琴高丽</a>
+						  				<img src="img/friends/icon.png"/>
+						  				<p>著名歌手、演员</p>
+						  			</span>
+						  			<i><b>＋</b>关注</i>
+						  		</li>
+						  		<li>
+						  			<p>添加微博好友，和他们分享音乐</p>
+						  		</li>
+						  		<li>
+						  			<div class="">
+						  				
+						  			</div>
+						  		</li>
+						  		
+						  	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+        	<div class="row">
+			    <div class="col-md-2"></div>
+			    <div class="col-md-8">
+			    	<div class="col-md-8">
+			    		<ul>
+			    			<li><a href="#">服务条款</a></li>|
+			    			<li><a href="#">隐私政策</a></li>|
+			    			<li><a href="#">版权投诉指引</a></li>|
+			    			<li><a href="#">意见反馈</a></li>
+			    		</ul>
+			    		<p>网易公司版权所有©1997-2019&nbsp;&nbsp;杭州乐读科技有限公司运营：<a>浙网文[2018]3506-263号</a></p>			    		
+			    		<p>违法和不良信息举报电话：&nbsp;&nbsp;0571-89853516 举报邮箱：<a>ncm5990@163.com</a></p>			    		
+			    	</div>
+			    	<div class="col-md-4">
+			    		<a href="#" id="footer-a1"></a>
+			    		<a href="music man.html" target="_blank" id="footer-a2"></a>
+			    		<a href="#" id="footer-a3"></a>
+			    		<a href="#" id="footer-a4"></a>			    		
+			    	</div>
+			    </div>
+			    <div class="col-md-2"></div>
+			</div>
+        </div>
+        <div class="top">
+			
+		</div>
+
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(".top").click(function(){
+	//				$(window).scrollTop(0); 回到顶部 无动画
+	                $('html,body').animate({"scrollTop":"0px"},100);
+			    })
+			    $(window).scroll(function(){
+					console.log($(window).scrollTop());					
+					if($(window).scrollTop()>200){
+						$(".top").fadeIn();
+					}else $(".top").fadeOut();					
+				})
+		</script>
+	</body>
+</html>
